@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap');
+
+:root {
+    --orange: rgb(255, 109, 0);
+    --grey: rgb(132, 132, 132);
+    --black: rgb(34, 34, 34);
+    --purple: rgb(130, 139, 178);
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+.font-title {
+    font-family: "Righteous", sans-serif;
+}
+
+.color-grey {
+    color: var(--grey);
+}
+
+.color-orange {
+    color: var(--orange);
+}
+
+.headerCustom {
+    background-image: url(./media/bg_presto.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: right;
+
+    @media screen and (max-width: 600px) {
+        background-size: cover;
+        background-position: 50%;
+    }
+
+}
+
+.navbarCustom {
+    width: 60%;
+    transition: 0.5s;
+    background-color: white;
+    position: fixed;
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    @media screen and (max-width: 600px) {
+        top: 0;
+        width: 100%;
+        transition: none;
+    }
+}
+
+.navbarCustom img {
+    width: 15%;
+}
+
+.navLink a {
+    transition: 0.2s;
+
+    &:hover {
+        color: var(--orange) !important;
+        text-shadow: 1px 1px 15px var(--orange);
+    }
+}
+
+.navLink:nth-child(1) a {
+    color: var(--orange) !important;
+    text-shadow: 1px 1px 15px var(--orange);
+}
+
+.imgHeader {
+    width: 85%;
+
+    @media screen and (max-width: 600px) {
+        width: 90%;
+    }
+}
+
+h1 {
+    letter-spacing: 7px;
+    font-size: calc(1.5rem + 8vw);
+}
+
+.text-gradient {
+    background: -webkit-linear-gradient(left, rgb(0, 0, 0), var(--orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300%;
+    animation: animate 3s ease-in-out infinite;
+
+    @media screen and (max-width: 600px) {
+        background: -webkit-linear-gradient(right, rgb(0, 0, 0), var(--orange));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0% 50%;
+    } 50% {
+        background-position: 100% 50%;
+    } 100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.btn-orange {
+    background-color: var(--orange);
+    font-weight: bold;
+    &:hover {
+        color: white;
+        background-color: black;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .color-grey {
+        color: black;
+    }
+}
