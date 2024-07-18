@@ -95,9 +95,9 @@ games.forEach((game, i) => {
         div.classList.add('col-6', 'col-lg-3', 'mb-3', 'mb-md-0')
         div.innerHTML = `
         <div class="card">
-            <img src="${game.img}" class="card-img-top imgCard" alt="...">
+            <img src="${game.img}" class="card-img-top imgCard w-100" alt="...">
                 <div class="card-body">
-                    <h4>${game.name}</h4>
+                    <h4 class='text-truncate'>${game.name}</h4>
                     <p class="card-text">${game.category}</p>
                     <p>${game.price == 0 ? 'Free to play' : game.price + '$'}</p>
                     <div class="d-flex align-items-center justify-content-end">
@@ -111,3 +111,46 @@ games.forEach((game, i) => {
 
 
 })
+
+
+//Reviews
+const reviews = [
+    {name : 'Christian', description: 'Sto sito fa proprio schifo'},
+    {name : 'Carlo', description: 'Ao, ma a me piace sto sito!'},
+    {name : 'Vito', description: 'Non si può proprio guardare! Bisogna fare di meglio'},
+    {name : 'Michelangelo', description: 'Mi piace la donnina. Complimenti!'},
+    {name : 'Mario', description: 'Quello de prima si sbaglia, me piace Michelangelo'},
+]
+
+let swiperWrapper = document.querySelector('#swiperWrapper')
+
+reviews.forEach(review =>{
+    let div = document.createElement('div')
+    div.classList.add('swiper-slide')
+    div.innerHTML = `
+    <div class="d-flex flex-column justify-content-center align-items-center h-100 p-3 text-center">
+        <h4>${review.name}</h4>
+        <p>${review.description}</p>
+    </div>
+    `
+    swiperWrapper.appendChild(div);
+})
+
+//swiper
+const swiper = new Swiper(".swiperReviews", {
+    effect: "coverflow",
+    grabCursor: true,
+    initialSlide: Math.floor(reviews.length/2),
+    centeredSlides: true,
+    slidesPerView: window.innerWidth < 600 ? 2 : 'auto',
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
