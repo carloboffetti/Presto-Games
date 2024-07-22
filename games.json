@@ -1,0 +1,102 @@
+[
+    {
+        "name": "The Legend of Zelda: Breath of the Wild",
+        "category": "Adventure",
+        "price": 59.99
+    },
+    {
+        "name": "Super Mario Odyssey",
+        "category": "Platform",
+        "price": 49.99
+    },
+    {
+        "name": "Red Dead Redemption 2",
+        "category": "Action",
+        "price": 39.99
+    },
+    {
+        "name": "The Witcher 3: Wild Hunt",
+        "category": "RPG",
+        "price": 29.99
+    },
+    {
+        "name": "Minecraft",
+        "category": "Sandbox",
+        "price": 26.95
+    },
+    {
+        "name": "Fortnite",
+        "category": "Battle Royale",
+        "price": 0.00
+    },
+    {
+        "name": "Call of Duty: Modern Warfare",
+        "category": "FPS",
+        "price": 59.99
+    },
+    {
+        "name": "Animal Crossing: New Horizons",
+        "category": "Simulation",
+        "price": 59.99
+    },
+    {
+        "name": "Among Us",
+        "category": "Party",
+        "price": 4.99
+    },
+    {
+        "name": "Assassin's Creed Valhalla",
+        "category": "Action",
+        "price": 59.99
+    },
+    {
+        "name": "Cyberpunk 2077",
+        "category": "RPG",
+        "price": 59.99
+    },
+    {
+        "name": "Fall Guys",
+        "category": "Party",
+        "price": 19.99
+    },
+    {
+        "name": "DOOM Eternal",
+        "category": "FPS",
+        "price": 59.99
+    },
+    {
+        "name": "Hades",
+        "category": "Rogue-like",
+        "price": 24.99
+    },
+    {
+        "name": "FIFA 21",
+        "category": "Sports",
+        "price": 49.99
+    },
+    {
+        "name": "NBA 2K21",
+        "category": "Sports",
+        "price": 59.99
+    },
+    {
+        "name": "Resident Evil Village",
+        "category": "Horror",
+        "price": 59.99
+    },
+    {
+        "name": "Ghost of Tsushima",
+        "category": "Action",
+        "price": 59.99
+    },
+    {
+        "name": "Final Fantasy VII Remake",
+        "category": "RPG",
+        "price": 59.99
+    },
+    {
+        "name": "Genshin Impact",
+        "category": "RPG",
+        "price": 0.00
+    }
+]
