@@ -22,7 +22,13 @@
 .color-orange {
     color: var(--orange);
 }
+.bg-orange {
+    background-color: var(--orange);
+}
 
+.bg-purple{
+    background-color: var(--purple);
+}
 .headerCustom {
     background-image: url(./media/bg_presto.png);
     background-repeat: no-repeat;
@@ -84,7 +90,7 @@
     }
 }
 
-h1 {
+.index-title {
     letter-spacing: 7px;
     font-size: calc(1.5rem + 8vw);
 }
@@ -143,7 +149,7 @@ h1 {
     padding-bottom: 50px;
 }
 
-.swiper-slide {
+.swiper-slide-index {
     background-position: center;
     background-size: cover;
     width: 300px;
@@ -163,6 +169,74 @@ h1 {
 
 .gamesCard{
     width: 75%;
+}
+
+
+
+.contact-row{
+    background: linear-gradient(rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.501)) ,url("./media/contact.jpg") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 82px;
+    height: calc(100vh - 82px);
+
+    @media screen and (max-width: 600px) {
+    margin-top: 70px;
+        
+    }
+}
+
+
+.border-custom{
+    border: 1px solid var(--orange);
+}
+
+
+.contactSwiper{
+    width: 350px;
+    height: 500px;
+}
+.swiper-slide-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+    height: 100%;
+    
+}
+
+.swiper-slide-contact:nth-child(1){
+    background: url(./media/persona1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.swiper-slide-contact:nth-child(2){
+    background: url(./media/persona2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.swiper-slide-contact:nth-child(3){
+    background: url(./media/valerio_vacca.png), white;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.container-form::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--purple);
+    position: absolute;
+    left: -30px;
+    bottom: -30px;
+    z-index: -1;
+    border-radius: 0.5rem;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.361);
 }
 
 @media screen and (max-width: 600px) {

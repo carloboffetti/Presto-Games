@@ -63,7 +63,7 @@ fetch("./games.json").then((response) => response.json()).then(data => {
     let radios = document.querySelectorAll(".form-check-input")
     // console.log(radios);
 
-    function filterByCategory() {
+    function filterByCategory(array) {
         // Il metodo find ritorna il primo elemento di un array che soddisfa una condizione
         let checked = Array.from(radios).find((input) => input.checked)
         let categoria = checked.id
@@ -71,17 +71,17 @@ fetch("./games.json").then((response) => response.json()).then(data => {
 
 
         if (categoria == 'All') {
-            showCards(data)
+            return array
         } else {
-            let filtered = data.filter((game) => game.category == categoria)
-            showCards(filtered)
+            let filtered = array.filter((game) => game.category == categoria)
+            return filtered
         }
 
     }
 
     radios.forEach(radio => {
         radio.addEventListener("click", () => {
-            filterByCategory()
+            globalFilter()
         })
     })
 
@@ -105,13 +105,13 @@ fetch("./games.json").then((response) => response.json()).then(data => {
 
     setInputPrice()
 
-    function filterByPrice(){
-        let filtered = data.filter( (game) => game.price <= inputRange.value )
-        showCards(filtered)
+    function filterByPrice(array){
+        let filtered = array.filter( (game) => game.price <= inputRange.value )
+        return filtered
     }
 
     inputRange.addEventListener( "input", ()=>{
-        filterByPrice()
+        globalFilter()
         numberPrice.innerHTML = inputRange.value
     } )
     
@@ -120,13 +120,28 @@ fetch("./games.json").then((response) => response.json()).then(data => {
     // Filtro per parola
     let wordInput = document.querySelector('#wordInput');
 
-    function filterByWord( word ){
-        let filtered = data.filter(game => game.name.toLowerCase().replaceAll(" ", "").includes( word.toLowerCase().replaceAll(" ", "")))
-        showCards(filtered)
+    function filterByWord( array ){
+        let filtered = array.filter(game => game.name.toLowerCase().replaceAll(" ", "").includes( wordInput.value.toLowerCase().replaceAll(" ", "")))
+        return filtered
     }
 
     wordInput.addEventListener(  'input', ()=>{
-        filterByWord(wordInput.value)
+        globalFilter()
     })
+
+
+
+    function globalFilter(){
+        let filteredByPrice = filterByPrice(data)
+        let filteredByWord = filterByWord(filteredByPrice)
+        let filteredByCategory = filterByCategory(filteredByWord)
+        showCards(filteredByCategory)
+    }
+
+    globalFilter();
+
+
+
+
 })
 

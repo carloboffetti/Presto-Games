@@ -126,7 +126,7 @@ let swiperWrapper = document.querySelector('#swiperWrapper')
 
 reviews.forEach(review =>{
     let div = document.createElement('div')
-    div.classList.add('swiper-slide')
+    div.classList.add('swiper-slide', 'swiper-slide-index')
     div.innerHTML = `
     <div class="d-flex flex-column justify-content-center align-items-center h-100 p-3 text-center">
         <h4>${review.name}</h4>
