@@ -42,7 +42,7 @@ fetch("./games.json").then((response) => response.json()).then(data => {
         cardsWrapper.innerHTML = '';
         array.forEach((game, i) => {
             let div = document.createElement('div')
-            div.classList.add("col-12", 'col-md-3', 'mb-2');
+            div.classList.add("col-6", 'col-md-3', 'mb-2');
             div.innerHTML = `
             <div class="card">
                 <img src="https://picsum.photos/${200 + i}" class="card-img-top img-fluid" alt="...">

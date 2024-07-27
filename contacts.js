@@ -12,14 +12,14 @@ let contenitoreDescrizione = document.querySelector("#contenitoreDescrizione")
 
 swiper.on("slideChange", () => {
     if (swiper.activeIndex == 0) {
-        expertName.innerText = `Paolina Cavatappi`
+        expertName.innerText = `Alessandra Rossi`
         expertDescription.innerText = `Da oltre 10 anni con noi, esperta in hardware`
     } else if (swiper.activeIndex == 1) {
-        expertName.innerText = `Franco Staco`
-        expertDescription.innerText = `Un mito nella vendita di giochi che fanno rima con Staco!`
+        expertName.innerText = `Franco Pio`
+        expertDescription.innerText = `Un mito nella vendita di giochi!`
     } else if (swiper.activeIndex == 2) {
-        expertName.innerText = `Valerio Racchia`
-        expertDescription.innerText = `Il boss finale piu' spaventoso mai visto prima`
+        expertName.innerText = `Valerio Vacca`
+        expertDescription.innerText = `Esperto in Marketing and Sales`
     }
 })
 
